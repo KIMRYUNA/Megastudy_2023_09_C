@@ -1,38 +1,27 @@
 #include<stdio.h>
-
 int main() {
-	//int a = 1;
-	//int* pa;
-	//pa = &a;
-	//printf("%d\n", &a);//a의 주소값
-	//printf("%d\n", pa);//a의 주솟값
-	//printf("%d\n", *pa);//f4를 갖고 있는 주솟값의 실제값 누구니
+	int matrix[3][4] = {
+		{1,2,3,4},
+		{5,6,7,8},
+		{9,10,11,12}
+	};
 
-	int a = 10;
-	int* pa;
-	pa = &a;
-	printf("a의 값은 %d\n", a);
-	printf("a의 주소값은 %d\n", &a);
-	printf("a의 주소값은 %d\n", pa);
-	printf("a의 값은 %d\n", *pa);
+	printf("matrix[1][2]:%d\n", matrix[1][2]);
+	int(*p)[4] = matrix; //matrix 첫번째 행 가리킴.
+	printf("p[1][2]: %d\n", p[1][2]); //7을 출력
+
+	
+
 	
 	
-	*pa = 100;
+	
+	//2행 5,6,7,8; 포인트 이용해라
+	int(*pp)[4];
+	matrix[1];//두번째 행의 주솟값
+	pp = &matrix[1];
 
-	printf("a의 값은 %d\n", a);
-	printf("a의 주소값은 %d\n", &a);
-	printf("a의 주소값은 %d\n", pa);
-	printf("a의 값은 %d\n ", *pa);
-
-
-
-
-	int b;
-	pa = &b;
-	*pa = 1000;
-	printf("b의 값은 %d\n", b);
-	printf("b의 주소값은 %d\n", &b);
-	printf("b의 주소값은 %d\n", pa);
-	printf("b의 값은 %d\n", *pa);
+	for (int i = 0; i < 4; i++) {
+		printf("%d\n", (*pp)[i]);
+	}
 
 }

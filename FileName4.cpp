@@ -1,43 +1,21 @@
-// 9.18 배열 평균, 합 구하기
-//내 코드
-
 #include<stdio.h>
-
-int main() {
-	
-	float arr[5];
-	float max = 0;
-
-	for (int i = 0; i < 5; i++) {
-		scanf_s("%f", &arr[i]);
-	}
-
-	for (int i = 0; i < 5; i++) {
-		if (max < arr[i]) {
-			max = arr[i];
-		}
-	}
-
-	printf("최댓값은 : %.2f", max);
-}
-
-// 선생님 코드
-
 int main() {
 
-	double arr[5];
-	float max = 0;
+	int a = 10;
+	int* pa;
+	pa = &a;
+	int** ppa;
+	ppa = &pa;
 
-	for (int i = 0; i < 5; i++) {
-		scanf_s("%lf", &arr[i]);
-	}
+	//*** 포인터 총 복습 
+	printf("a의 값은 %d", a);//10
+	printf("a의 주소값은 %d", &a);//&a
 
-	max = arr[0];
-	for (int i = 0; i < 5; i++) {
-		if (max < arr[i]) {
-			max = arr[i];
-		}
-	}
+	printf("pa의 값은 %d", pa);//&a
+	printf("pa의 주소값은 %d", &pa);//&pa
 
-	printf("최댓값은 : %lf", max);
-}
+	printf("ppa의 값은 %d", ppa);//&pa
+	printf("pa의 값 또는 a의 주소값은 %d", *ppa);//&a
+	printf("a의 값은 %d", **ppa);//a의 값
+
+
