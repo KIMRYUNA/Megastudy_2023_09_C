@@ -1,20 +1,22 @@
 #include<stdio.h>
-int main() {
-	int a;
-	int b;
-	printf("정수 a의 값을 입력하세요 ");
-	scanf_s("%d", &a);
-	printf("정수 b의 값을 입력하세요 ");
-	scanf_s("%d", &b);
-
-	int* pa;//포인터 선언
-
-	pa = &b;
-	printf("바뀐 a의 값은 %d ", *pa);
-
-	pa = &a;
-	printf("바뀐 b의 값은 %d ", *pa);
-
-	//*pa가 값
-	//&pa가 주솟값
+#include<string.h>
+void swap(int *a, int *b) {//주솟값주려면 포인터 찍어주기
+	int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+	
 }
+
+int main() {
+	int m = 10;
+	int n = 20;
+	
+	swap(&m, &n);//m과 n의 주솟값을 줘야 참조해서 바꿈. 
+	printf("a=%d, b=%d", m, n);
+	 return 0;
+
+}
+
+
+
