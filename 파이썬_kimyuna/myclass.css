@@ -1,0 +1,68 @@
+.main{
+    background-image:linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05)), url(main.jpg);
+    background-size:cover;
+    /* 브라우저의 70% 높이를 차지하세요 */
+    height: 70vh;
+    /* 자식들을 가운데로 배치하세요 */
+    display:flex;
+    /* 세로로 배치하세요 */
+    flex-direction: column;
+    /* 좌우 기준으로 가운데 배치하세요 */
+    justify-content: center;
+    /* 상하 기준으로 가운데 배치하세요 */
+    align-items: center;
+    gap:20px
+}
+
+/* 폰트 가져오기 */
+@font-face{
+    /* 폰트 DF 가져오기 */
+    src:url(bm.otf);
+    /* 이름 붙히기 */
+    font-family:'bm';
+}
+
+.title{
+    font-size:90px ;
+    color:ghostwhite;
+    font-family:'bm';
+
+}
+
+.explain{
+    font-size:40px;
+    color:ghostwhite;
+    font-family:'bm';
+}
+
+.buy{
+   
+    padding:20px 40px;
+    font-size:30px;
+    font-family: 'bm';
+    color: blue;
+    border:none;
+    border-radius: 5px;
+    background-color:aquamarine;
+
+}
+
+
+.class{
+    /* 자식 애들을 바둑판 모양으로 해줘 */
+    display:grid;
+    /* 4열로 시켜줘 */
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+
+}
+
+.item{
+    border-radius: 8px;
+    padding:20px;
+    text-align: center;
+    background-color:yellowgreen;
+    font-family:'bm';
+
+}

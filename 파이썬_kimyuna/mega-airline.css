@@ -1,0 +1,52 @@
+.navi{
+    width:60vw;
+    /* 위아래는 마진을 0,좌우는 너가 알아서 조율해서(auto) 맞춰주삼. */
+    margin:0 auto;
+    /* 자식들 좌우로 배치 1,2 위아래가 아니라 좌우!! */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo{
+    width:180px;
+    height:80px;
+    /* 이미지가 꾸겨지지않게 해주세요 */
+    object-fit: contain;
+}
+.linkBox{
+    display:flex;
+    gap:15px;
+    font-family:'bm';
+}
+
+@font-face{
+    /* 폰트 DF 가져오기 */
+    src:url(bm.otf);
+    /* 이름 붙히기 */
+    font-family:'bm';
+}
+
+.banner{
+    width:100vw;
+    height:300px;
+    background-image: url(airplane.jpg);
+    /* 사진의 사이즈 모두 적절하게, 그리고 정중앙으로 해주세요 */
+    background-size:cover;
+    background-position: 50% 38%;
+    /* 자식의 배치를 중앙으로 */
+    display:flex;
+    align-items: center;
+}
+
+.formBox{
+    width:60vw;
+    margin:0 auto;
+    background-color:white;
+    padding:20px 40px;
+    border-radius:40px;
+    display:flex;
+    gap:20px;
+
+}

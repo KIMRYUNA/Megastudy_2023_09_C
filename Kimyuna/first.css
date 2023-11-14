@@ -1,0 +1,121 @@
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+:root {
+    --color-branding: #23A6F0; /* 브랜딩 색상 */
+    --color-main-topic: #252B42; /* 주요 주제 색상 */
+    --color-description-text: #737373; /* 설명 텍스트 색상 */
+    --color-border: #BDBDBD; /* 테두리 색상 */
+    --color-background: #FFF; /* 배경 색상 */
+    
+    --icon-font-size: 30px;
+}
+
+.main-container{
+    width:100vw;
+    height:100vh;
+    /*가운데 배치 해주는 css*/
+    display:flex;
+    /* 세로로 배치해줘 */
+    flex-direction:column;
+    /* 좌우 기준으로 가운데 배치해줘 */
+    justify-content:center;
+    /* 위아래 기준으로 가운데 배치해줘 */
+    align-items:center;
+    /*자식들의 간격을 벌려줘  */
+    gap:30px;
+
+}
+.branding-box{
+    color:#23A6F0;
+    font-size: 14px;
+    font-weight: 700;
+    
+
+}
+
+.topic-box{
+    color:#252B42;
+    font-size: 40px;
+    font-weight: 700;
+    /* 글씨 정렬 중앙화 */
+    text-align:center;
+
+
+}
+.description-text-box{
+    color:#737373;
+    font-size: 14px;
+    font-weight: 700;
+    /* 글씨 정렬 중앙화 */
+    text-align:center;
+}
+
+.apple-button-box{
+    /* 버튼 테두리 만들기 */
+    border:1px solid #BDBDBD;
+    padding:18px 28px;
+    border-radius:10px;
+    /* 테두리 그림자 추가 */
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.1);
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+
+
+
+}
+
+
+.apple-logo{
+    font-size: 30px;
+    color:#252B42
+}
+
+
+
+
+.google-button-box{
+    background-color:#252B42;
+    color:white;
+    /* 버튼 테두리 만들기 */
+    border:1px solid #BDBDBD;
+    padding:18px 28px;
+    border-radius:10px;
+    /* 테두리 그림자 추가 */
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.1);
+    
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+}
+
+.download-buttons-box{
+    display:flex;
+    gap:20px;
+}
+
+
+/* 모바일 버전 css 영역 ->모바일 관련 css는 여기에 넣어주세요. 모바일 버전은 여기만 관리하면됨 */
+@media screen and (max-width: 767px) {
+    .download-buttons-box
+    {
+        /* 세로로 바꿔조 */
+        flex-direction:column;
+        /* 반응형 영역의 시작 */
+    }
+
+}
